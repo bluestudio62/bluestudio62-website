@@ -164,3 +164,7 @@ async function getPosts({ graphql, reporter }) {
 
   return graphqlResult.data.allWpPost.edges
 }
+
+exports.createPages = async ({ actions, graphql, reporter }) => {
+  // code for the next steps will go in here.
+}
