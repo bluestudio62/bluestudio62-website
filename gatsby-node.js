@@ -166,5 +166,14 @@ async function getPosts({ graphql, reporter }) {
 }
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
-  // code for the next steps will go in here.
+  const result = await graphql(`
+    {
+      allWpPost {
+        nodes {
+          id
+          uri
+        }
+      }
+    }
+  `)
 }
