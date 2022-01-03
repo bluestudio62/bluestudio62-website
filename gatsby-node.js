@@ -165,15 +165,3 @@ async function getPosts({ graphql, reporter }) {
   return graphqlResult.data.allWpPost.edges
 }
 
-exports.createPages = async ({ actions, graphql, reporter }) => {
-  const result = await graphql(`
-    {
-      allWpPost {
-        nodes {
-          id
-          uri
-        }
-      }
-    }
-  `)
-}
